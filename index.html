@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+	<title>CD - Album Title</title>
+
+	<!-- Meta tags -->
+	<meta charset="utf-8">
+	<meta name="author" content="Sam 'Berry' Beresford">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="Content-Type" content="text/html">
+
+	<!-- Bootstrap 4.3.1 CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Font Awesome 5.6.3 CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/promo.css">
+</head>
+<body class="h-100">
+	<div class="container-fluid h-100">
+		<div class="row h-100">
+			<!-- Left-bar (Audio tracks) -->
+			<div id="left" class="col-xl-3 col-lg-4 col-md-5 col-12 py-2 text-center align-items-center justify-content-center">
+				<h1 style="color: #ffc61a;">Album&nbsp;Title</h1>
+
+				<!-- Rotate Prompt for mobile devices -->
+				<div id="rotate-prompt" class="col py-2 d-sm-none d-block">
+					<p>Rotate your device to see the album booklet</p>
+					<i class="fas fa-mobile-alt"></i>
+					<i class="fas fa-sync"></i>
+					<i class="fas fa-mobile-alt fa-rotate-90"></i>
+					<p>Or download it here</p>
+					<a href="pages/Booklet.pdf" target="_blank" download>
+						<span id="download" class="page-button"><i class="fas fa-file-download"></i></span>
+					</a>
+				</div>
+
+				<br>
+
+				<!-- Audio List -->
+				<ul id="audio-list">
+					<!-- Audio Element that can play all tracks in order -->
+					<li>
+						<audio id="playAll" preload="auto" controls>
+							<source src="sound/Track01.mp3" type="audio/mpeg">
+						</audio>
+						
+						<div id="playing-label">&nbsp;</div>
+
+						<p>
+							<strong>Play All Tracks</strong>
+							<a href="sound/Tracks.zip" target="_blank" download>(download&nbsp;all)</a>
+						</p>
+					</li>
+					<li>
+						<hr color="#FFF">
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(0); pauseAllOtherPlayback(this);" controls><source src="sound/Track01.mp3" type="audio/mpeg"></audio>
+
+						<p>1. 
+						<a href="sound/Track01.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(1); pauseAllOtherPlayback(this);" controls><source src="sound/Track02.mp3" type="audio/mpeg"></audio>
+
+						<p>2.     
+						<a href="sound/Track02.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(2); pauseAllOtherPlayback(this);" controls><source src="sound/Track03.mp3" type="audio/mpeg"></audio>
+
+						<p>3. 
+						<a href="sound/Track03.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(3); pauseAllOtherPlayback(this);" controls><source src="sound/Track04.mp3" type="audio/mpeg"></audio>
+
+						<p>4. 
+						<a href="sound/Track04.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(4); pauseAllOtherPlayback(this);" controls><source src="sound/Track05.mp3" type="audio/mpeg"></audio>
+						
+						<p>5. 
+							<a href="sound/Track05.mp3" target="_blank" download> 
+						  (download&nbsp;track)</a></p>
+					</li>
+					<li>					
+						<audio preload="metadata" onplay="turnToSongPage(5); pauseAllOtherPlayback(this);" controls><source src="sound/Track06.mp3" type="audio/mpeg"></audio>
+						
+						<p>6. 
+							<a href="sound/Track06.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(6); pauseAllOtherPlayback(this);" controls><source src="sound/Track07.mp3" type="audio/mpeg"></audio>
+						
+						<p>7. 
+							<a href="sound/Track07.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(7); pauseAllOtherPlayback(this);" controls><source src="sound/Track08.mp3" type="audio/mpeg"></audio>
+						
+						<p>8. 
+							<a href="sound/Track08.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>					
+						<audio preload="metadata" onplay="turnToSongPage(8); pauseAllOtherPlayback(this);" controls><source src="sound/Track09.mp3" type="audio/mpeg"></audio>
+						
+						<p>9. 
+							<a href="sound/Track09.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>					
+						<audio preload="metadata" onplay="turnToSongPage(9); pauseAllOtherPlayback(this);" controls><source src="sound/Track10.mp3" type="audio/mpeg"></audio>
+						
+						<p>10. 
+							<a href="sound/Track10.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>				
+						<audio preload="metadata" onplay="turnToSongPage(10); pauseAllOtherPlayback(this);" controls><source src="sound/Track11.mp3" type="audio/mpeg"></audio>
+
+						<p>11. 
+							<a href="sound/Track11.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>
+						<audio preload="metadata" onplay="turnToSongPage(11); pauseAllOtherPlayback(this);" controls><source src="sound/Track12.mp3" type="audio/mpeg"></audio>
+						
+						<p>12. 
+							<a href="sound/Track12.mp3" target="_blank" download> (download&nbsp;track)</a></p>
+					</li>
+					<li>				
+						<audio preload="metadata" onplay="turnToSongPage(12); pauseAllOtherPlayback(this);" controls><source src="sound/Track13.mp3" type="audio/mpeg"></audio>
+						
+						<p>13. 
+							<a href="sound/Track13.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>				
+						<audio preload="metadata" onplay="turnToSongPage(13); pauseAllOtherPlayback(this);" controls><source src="sound/Track14.mp3" type="audio/mpeg"></audio>
+						
+						<p>14. 
+							<a href="sound/Track14.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+					<li>				
+						<audio preload="metadata" onplay="turnToSongPage(14); pauseAllOtherPlayback(this);" controls><source src="sound/Track15.mp3" type="audio/mpeg"></audio>
+						
+						<p>15. 
+							<a href="sound/Track15.mp3" target="_blank" download>(download&nbsp;track)</a></p>
+					</li>
+				</ul>
+			</div>
+			<!-- Responsive Flipbook container -->
+			<div id="flipbook-col" class="offset-xl-3 offset-lg-4 offset-md-5 h-100 py-0 fixed-top d-none d-sm-flex flex-column justify-content-between">
+				<!-- Initially display loading icon -->
+				<span id="loading" class="page-button text-center"><i class="fas fa-compact-disc fa-spin fa-10x"></i></span>
+				<!-- Hidden until loaded -->
+				<div class="flipbook-viewport d-none">
+					<!-- Top Navbar -->
+					<div class="top-bar px-2 d-flex align-items-center justify-content-between">
+						<a href="pages/Booklet.pdf" target="_blank" download>
+							<span id="download" class="page-button"><i class="fas fa-file-download"></i></span>
+						</a>
+						<span id="zoom" class="page-button d-none d-lg-block"><i id="zoom-icon" class="fas fa-search-plus"></i></span>
+						<span id="close" class="page-button d-none d-sm-inline-block d-md-none"><i class="fas fa-times"></i></button>
+					</div>
+					<div class="flipbook-container">
+						<div class="flipbook">
+							<!-- Booklet pages -->
+							<div class="page" style="background-image:url(pages/1.jpg)"></div>
+							<div class="page" style="background-image:url(pages/2.jpg)"></div>
+							<div class="page" style="background-image:url(pages/3.jpg)"></div>
+							<div class="page" style="background-image:url(pages/4.jpg)"></div>
+							<div class="page" style="background-image:url(pages/5.jpg)"></div>
+							<div class="page" style="background-image:url(pages/6.jpg)"></div>
+							<div class="page" style="background-image:url(pages/7.jpg)"></div>
+							<div class="page" style="background-image:url(pages/8.jpg)"></div>
+							<div class="page" style="background-image:url(pages/9.jpg)"></div>
+							<div class="page" style="background-image:url(pages/10.jpg)"></div>
+							<div class="page" style="background-image:url(pages/11.jpg)"></div>
+							<div class="page" style="background-image:url(pages/12.jpg)"></div>
+							<div class="page" style="background-image:url(pages/13.jpg)"></div>
+							<div class="page" style="background-image:url(pages/14.jpg)"></div>
+							<div class="page" style="background-image:url(pages/15.jpg)"></div>
+							<div class="page" style="background-image:url(pages/16.jpg)"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Bottom Booklet Navbar (Hidden on Mobile) -->
+				<div class="page-bar d-md-block d-none">
+						<span class="page-button first"><i class="fas fa-step-backward"></i></span>
+						<span  class="page-button prev"><i class="fas fa-caret-left"></i></span>
+						<span class="page-num">1 / 16</span>
+						<span class="page-button next"><i class="fas fa-caret-right"></i></span>
+						<span class="page-button last"><i class="fas fa-step-forward"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JQuery 3.4.1 -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- Popper 1.14.7 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<!-- Bootstrap 4.3.1 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- JQuery-UI 1.12.1 -->
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<!-- Modernizr 2.5.3 -->
+	<script type="text/javascript" src="lib/modernizr.2.5.3.min.js"></script>
+	<!-- Custom Javascript -->
+	<script src="js/promo.js"></script>
+</body>
+</html>
